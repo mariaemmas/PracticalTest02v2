@@ -19,6 +19,7 @@ class PracticalTest02v2MainActivity : AppCompatActivity() {
     private lateinit var wordInput: EditText
     private lateinit var submitButton: Button
     private lateinit var definitionResult: TextView
+    private lateinit var openServerActivityButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,7 @@ class PracticalTest02v2MainActivity : AppCompatActivity() {
         wordInput = findViewById(R.id.word_input)
         submitButton = findViewById(R.id.submit_button)
         definitionResult = findViewById(R.id.definition_result)
+        openServerActivityButton = findViewById(R.id.open_server_activity)
 
         submitButton.setOnClickListener {
             val word = wordInput.text.toString()
@@ -35,6 +37,10 @@ class PracticalTest02v2MainActivity : AppCompatActivity() {
             } else {
                 definitionResult.text = "Introduceți un cuvânt!"
             }
+        }
+        openServerActivityButton.setOnClickListener {
+            val intent = Intent(this, ServerCommunicationActivity::class.java)
+            startActivity(intent)
         }
     }
 

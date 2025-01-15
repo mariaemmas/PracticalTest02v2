@@ -27,4 +27,11 @@
         android:padding="10dp"
         android:layout_marginTop="16dp"
         android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/open_server_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comunică cu serverul"
+        android:layout_marginTop="16dp" />
 </LinearLayout>
