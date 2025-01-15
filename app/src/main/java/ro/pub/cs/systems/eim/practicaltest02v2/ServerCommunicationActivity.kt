@@ -31,7 +31,7 @@ class ServerCommunicationActivity : AppCompatActivity() {
         Thread {
             try {
                 // Conectare la serverul local (IP-ul emulatorului este 10.0.2.2)
-                val socket = Socket("10.0.2.2", 12345)
+                val socket = Socket("10.41.27.67", 12345)
                 val input = BufferedReader(InputStreamReader(socket.getInputStream()))
 
                 // Citirea răspunsului de la server
